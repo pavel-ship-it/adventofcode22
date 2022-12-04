@@ -52,11 +52,10 @@ class Task3: Task {
     }
 
     func calc(_ inputFile: String) -> Int {
-        let out = fileData(inputFile)
+        fileData(inputFile)
             .map { $0.map { String($0) } }
             .map { outcome(Hand(rawValue: $0[0])!, Hand(rawValue: $0[2])!) }
             .reduce(0, +)
-        return out
     }
 }
 

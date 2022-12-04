@@ -21,11 +21,9 @@ class Task5: Task {
     }
 
     func calc(_ inputFile: String) -> Int {
-
-        let out = fileData(inputFile)
+        fileData(inputFile)
             .map { find($0) }
             .reduce(0, +)
-        return out
     }
 }
 
@@ -57,10 +55,9 @@ class Task6: Task5 {
     }
 
     override func calc(_ inputFile: String) -> Int {
-        let out = fileData(inputFile)
+        fileData(inputFile)
             .split(3)
             .map { getBadge($0) }
             .reduce(0, +)
-        return out
     }
 }
