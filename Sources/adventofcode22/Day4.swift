@@ -14,15 +14,15 @@ class Task7: Task {
     }
 }
 
-class Task7ToBad: Task {
-    func calc(_ inputFile: String) -> Int {
-        fileData(inputFile)
-            .map { $0.components(separatedBy: CharacterSet(charactersIn: "-,")) }
-            .map { (Int($0[0])!, Int($0[1])!, Int($0[2])!, Int($0[3])!) }
-            .map { ($0.0 <= $0.2 && $0.1 >= $0.3) || ($0.2 <= $0.0 && $0.3 >= $0.1) ? 1 : 0 } // The line here
-            .reduce(0, +)
-    }
-}
+//class Task7ToBad: Task {
+//    func calc(_ inputFile: String) -> Int {
+//        fileData(inputFile)
+//            .map { $0.components(separatedBy: CharacterSet(charactersIn: "-,")) }
+//            .map { (Int($0[0])!, Int($0[1])!, Int($0[2])!, Int($0[3])!) }
+//            .map { ($0.0 <= $0.2 && $0.1 >= $0.3) || ($0.2 <= $0.0 && $0.3 >= $0.1) ? 1 : 0 } // The line here
+//            .reduce(0, +)
+//    }
+//}
 
 class Task8: Task {
     func calc(_ inputFile: String) -> Int {
