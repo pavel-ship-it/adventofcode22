@@ -79,7 +79,7 @@ class Task14: Task13 {
 
     override func calc(_ inputFile: String) -> Int {
         let root = readLog(log: fileData(inputFile))
-        var needToFree = root.size - (70000000 - 30000000)
+        let needToFree = root.size - (70000000 - 30000000)
         return searchForSmallestEnoughDir(root, needToFree)?.size ?? 0
     }
 }
